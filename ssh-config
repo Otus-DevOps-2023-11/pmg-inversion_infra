@@ -1,0 +1,15 @@
+Host bastion
+    HostName 51.250.8.213
+    User appuser
+    IdentityFile ~/.ssh/appuser
+
+Host someinternalhost
+    HostName 10.128.0.7
+    User appuser
+    IdentityFile ~/.ssh/appuser
+    ProxyCommand ssh bastion nc %h %p
+
+Host someinternalhost_vpn
+    HostName 10.128.0.7
+    User appuser
+    IdentityFile ~/.ssh/appuser
