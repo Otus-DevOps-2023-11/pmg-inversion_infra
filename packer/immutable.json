@@ -31,7 +31,7 @@
         },
         {
             "type": "shell",
-            "script": "scripts/deploy_sh.sh",
+            "script": "scripts/deploy.sh",
             "execute_command": "sudo {{.Path}}"
         },
         {
