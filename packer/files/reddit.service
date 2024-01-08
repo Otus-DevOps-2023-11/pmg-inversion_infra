@@ -1,0 +1,15 @@
+[Unit]
+Description=Puma (reddit)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/reddit/
+ExecStart=/usr/local/bin/puma
+Restart=always
+StartLimitInterval=30
+TimeoutSec=15
+
+[Install]
+WantedBy=multi-user.target
