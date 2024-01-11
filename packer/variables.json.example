@@ -1,0 +1,6 @@
+{
+    "v_folder_id": "aaaaaa",
+    "v_service_account_key_file": "key.json",
+    "v_subnet_id": "bbbbb",
+    "v_source_image": "ubuntu-1604-lts"
+}
