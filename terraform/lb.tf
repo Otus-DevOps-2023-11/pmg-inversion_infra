@@ -1,5 +1,5 @@
-resource "yandex_lb_target_group" "balanced-app"{
-  name      = "balanced-app"
+resource "yandex_lb_target_group" "balanced-app" {
+  name = "balanced-app"
 
   dynamic "target" {
     for_each = yandex_compute_instance.app
@@ -27,11 +27,11 @@ resource "yandex_lb_network_load_balancer" "load-balancer" {
     target_group_id = yandex_lb_target_group.balanced-app.id
 
     healthcheck {
-      name = "http"
-      interval = 2
-      timeout = 1
+      name                = "http"
+      interval            = 2
+      timeout             = 1
       unhealthy_threshold = 2
-      healthy_threshold = 2
+      healthy_threshold   = 2
       http_options {
         port = 9292
         path = "/"

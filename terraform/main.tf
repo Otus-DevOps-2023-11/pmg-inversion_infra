@@ -1,23 +1,23 @@
-# terraform {
-#   required_providers {
-#     yandex = {
-#       source = "yandex-cloud/yandex"
-#       version = "0.104.0"
-#     }
-#   }
-#   required_version = ">= 0.13"
-# }
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+      version = "0.104.0"
+    }
+  }
+  required_version = ">= 0.13"
+}
 
 provider "yandex" {
-  cloud_id = var.cloud_id
-  folder_id = var.folder_id
+  cloud_id                 = var.cloud_id
+  folder_id                = var.folder_id
   service_account_key_file = var.service_account_key_file
-  zone = var.zone
+  zone                     = var.zone
 }
 
 resource "yandex_compute_instance" "app" {
   count = var.app_cnt
-  name = "reddit-app-${count.index}"
+  name  = "reddit-app-${count.index}"
 
   metadata = {
     ssh-keys = "ubuntu:${file(var.public_key_path)}"
@@ -50,7 +50,7 @@ resource "yandex_compute_instance" "app" {
   }
 
   provisioner "file" {
-    source = "files/puma.service"
+    source      = "files/puma.service"
     destination = "/tmp/puma.service"
   }
 
