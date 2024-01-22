@@ -40,3 +40,9 @@ variable "db_disk_image" {
 variable "token" {
   description = "token"
 }
+variable "app_name" {
+  description = "application name"
+}
+variable "db_name" {
+  description = "database name"
+}

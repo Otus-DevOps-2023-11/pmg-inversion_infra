@@ -10,3 +10,5 @@ app_cnt                  = 1
 app_disk_image           = "fd8b1r26f9pcnui83ocu"
 db_disk_image            = "fd8jglt9kvncbmcurb2t"
 token                    = "y0_AgAAAABy73mJAATuwQAAAAD1zMBw2eTiDkIrTQyjMG0eV1lRZ5TFO7N"
+app_name                 = "stage-reddit-app"
+db_name                  = "stage-reddit-db"

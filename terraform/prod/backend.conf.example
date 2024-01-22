@@ -1,0 +1,5 @@
+bucket     = "pmg-tf-bucket"
+region     = "ru-central1"
+key        = "prod.tfstate"
+access_key = "YCAJEADsMqOQS6nfH1Oo1SoLN"
+secret_key = "YCNVnaZi5hjS4WtMMieIm6kAls-rx2_zlFwoWO0N"
