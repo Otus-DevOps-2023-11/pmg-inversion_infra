@@ -29,3 +29,20 @@ variable "service_account_key_file" {
 variable "app_cnt" {
   description = "application instance count"
 }
+variable "app_disk_image" {
+  description = "Disk image for reddit app"
+  default     = "prod-reddit-app"
+}
+variable "db_disk_image" {
+  description = "Disk image for reddit db"
+  default     = "prod-reddit-db"
+}
+variable "token" {
+  description = "token"
+}
+variable "app_name" {
+  description = "application name"
+}
+variable "db_name" {
+  description = "database name"
+}
