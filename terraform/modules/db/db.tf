@@ -1,14 +1,14 @@
 # Закомментировано для проерки задания в github
 #
-# terraform {
-#   required_providers {
-#     yandex = {
-#       source = "yandex-cloud/yandex"
-#       version = "0.104.0"
-#     }
-#   }
-#   required_version = ">= 0.13"
-# }
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+      version = "0.104.0"
+    }
+  }
+  required_version = ">= 0.13"
+}
 
 resource "yandex_compute_instance" "db" {
   name = var.db_name

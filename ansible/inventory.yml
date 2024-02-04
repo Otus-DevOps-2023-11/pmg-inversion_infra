@@ -1,0 +1,10 @@
+app:
+  hosts:
+    appserver:
+      ansible_host: 51.250.9.170
+      ansible_python_interpreter: /usr/local/bin/python3.8
+db:
+  hosts:
+    dbserver:
+      ansible_host: 62.84.115.34
+      ansible_python_interpreter: /usr/local/bin/python3.8
