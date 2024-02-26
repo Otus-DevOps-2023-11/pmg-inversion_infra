@@ -1,0 +1,9 @@
+---
+- name: Install dependencies
+  hosts: all
+  become: true
+  tasks:
+    - name: Install packages for app server
+      apt:
+        name: ['git', 'ruby-full', 'ruby-bundler', 'build-essential']
+        state: present
