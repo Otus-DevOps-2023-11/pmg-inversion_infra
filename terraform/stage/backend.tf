@@ -1,14 +1,14 @@
 terraform {
   # Закомментировано для проерки задания в github
   #
-  # required_providers {
-  #   yandex = {
-  #     source = "yandex-cloud/yandex"
-  #     #   version = "0.104.0"
-  #     version = ">= 0.35.0"
-  #   }
-  # }
-  # required_version = ">= 0.13"
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+      #   version = "0.104.0"
+      version = ">= 0.35.0"
+    }
+  }
+  required_version = ">= 0.13"
 
   backend "s3" {
     endpoints = {

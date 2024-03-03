@@ -1,6 +1,7 @@
 {
-    "v_folder_id": "aaaaaa",
-    "v_service_account_key_file": "key.json",
-    "v_subnet_id": "bbbbb",
-    "v_source_image": "ubuntu-1604-lts"
+    "v_folder_id": "b1g6tvkri9tctb4v3mtu",
+    "v_service_account_key_file": "packer/key.json",
+    "v_subnet_id": "e9b5jvjh087hn32pkgkt",
+    "v_source_image": "ubuntu-1604-lts",
+    "v_platform_id": "standard-v1"
 }

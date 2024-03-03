@@ -1,14 +1,14 @@
 # Закомментировано для проерки задания в github
 #
-# terraform {
-#   required_providers {
-#     yandex = {
-#       source = "yandex-cloud/yandex"
-#       version = "0.104.0"
-#     }
-#   }
-#   required_version = ">= 0.13"
-# }
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+      version = "0.104.0"
+    }
+  }
+  required_version = ">= 0.13"
+}
 
 resource "yandex_compute_instance" "app" {
   name = var.app_name
@@ -44,20 +44,38 @@ resource "yandex_compute_instance" "app" {
     private_key = file(var.private_key_path)
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "sudo systemctl set-environment DATABASE_URL=${var.database_url}"
-    ]
-  }
+  # Закомментировано для ansible-2
+  #
+  # provisioner "remote-exec" {
+  #   inline = [
+  #     "sudo systemctl set-environment DATABASE_URL=${var.database_url}"
+  #   ]
+  # }
 
-  provisioner "file" {
-    source      = "${path.module}/files/puma.service"
-    destination = "/tmp/puma.service"
-  }
+  # provisioner "file" {
+  #   source      = "${path.module}/files/puma.service"
+  #   destination = "/tmp/puma.service"
+  # }
 
-  provisioner "remote-exec" {
-    scripts = [
-      "${path.module}/files/deploy.sh"
-    ]
-  }
+  # provisioner "remote-exec" {
+  #   scripts = [
+  #     "${path.module}/files/deploy.sh"
+  #   ]
+  # }
+
+  # provisioner "install-python" {
+  #   inline = [
+  #     "sudo add-apt-repository -y ppa:jblgf0/python",
+  #     "sudo apt-get update",
+  #     "sudo apt-get install python3.6",
+  #     "alias python=python3.6"
+  #     "alias python3=python3.6",
+  #     "echo \"alias python=python3.6\" >> ~/.bash_aliases",
+  #     "echo \"alias python3=python3.6\" >> ~/.bash_aliases"
+  #   ]
+  # }
+
+# echo "alias python=python3.6
+# alias python3=python3.6" > ~/.bash_aliases
+# cat ~/.bash_aliases
 }
