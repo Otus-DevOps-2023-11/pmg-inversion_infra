@@ -3,6 +3,7 @@
   hosts: app
   tasks:
     - name: Fetch the latest version of application code
+      become: true
       git:
         repo: 'https://github.com/express42/reddit.git'
         dest: /home/ubuntu/reddit
