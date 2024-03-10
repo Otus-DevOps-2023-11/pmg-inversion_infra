@@ -6,6 +6,4 @@ variables.json
 .terraform/
 backend.conf
 *.retry
-jdauphant.nginx
-jdauphant.nginx
 vault.key
