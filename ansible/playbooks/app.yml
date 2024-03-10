@@ -1,0 +1,7 @@
+- name: Configure App  # <-- Словесное описание сценария (name)
+  hosts: app
+  become: true
+
+  roles:
+  - app
+  - jdauphant.nginx
