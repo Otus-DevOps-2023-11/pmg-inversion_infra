@@ -216,3 +216,25 @@ http://158.160.5.85:9292
 #### Задание со *
 - inventory.py, который создаёт динамический inventory.json
   - Перемещен по environments
+
+## ДЗ - 11
+### Разработка и тестирование Ansible ролей и плейбуков
+
+#### Что сделано
+- Установлен vagrant v2.4.1
+- Установлен Virtualbox
+- Создан Vagrantfile
+- Скачан ubuntu/xenial64 - Естественно, напрямую, локально закачав xenial-server-cloudimg-amd64-vagrant.box тут: https://app.vagrantup.com/ubuntu/boxes/xenial64
+- UPD: для решения проблем с версией питона поставил ubuntu/bionic64, локально закачав bionic-server-cloudimg-amd64-vagrant.box тут: https://app.vagrantup.com/ubuntu/boxes/bionic64
+- Развернуты в локальном virtualbox
+  - dbserver
+  - appserver
+- Добавлены provision для
+  - db
+  - app
+- Доработаны tasks для
+  - roles/db
+  - roles/app
+- Тестирование роли
+  - Установлены зависимости
+  - Проверены роли
